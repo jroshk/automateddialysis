@@ -11,14 +11,12 @@ from AtlasI2C import (
 
 #!/usr/bin/env python
 import os
-
 # if __name__ == '__main__':
 #     try:
 #         serialNum = sensor()
 #         loop(serialNum)
 #     except KeyboardInterrupt:
 #         kill()
-
 
 def print_devices(device_list, device):
     for i in device_list:
@@ -86,8 +84,8 @@ if __name__ == '__main__':
     device_list = get_devices()
 
     device = device_list[0]
-
-
+    
+#Do I need to put a global variable in for conductivity?
 def get_conductivity():
     delaytime = device.long_timeout
     while True:
